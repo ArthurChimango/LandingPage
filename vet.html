@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Amigo Fiel | Medicina Veterinária de Excelência</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Quicksand', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Fredoka', sans-serif; }
+        .bg-pet-green { background-color: #52B788; }
+        .text-pet-green { color: #52B788; }
+        .bg-soft-sky { background-color: #F0F7F4; }
+        .smooth-transition { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .hero-gradient { background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.3)); }
+        
+        /* Decoração de Patinhas no Fundo */
+        .paw-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M20 10c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm-12 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6 8c3.3 0 6-2.7 6-6s-2.7-6-6-6-6 2.7-6 6 2.7 6 6 6z' fill='%2352B788' fill-opacity='0.05'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-soft-sky text-gray-800 paw-pattern">
+
+    <!-- Header / Nav -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <i class="fas fa-paw text-pet-green text-3xl mr-2"></i>
+                    <span class="text-2xl font-bold tracking-tight text-gray-800 uppercase">Amigo<span class="text-pet-green">Fiel</span></span>
+                </div>
+                <div class="hidden md:flex space-x-10 items-center">
+                    <a href="#inicio" class="text-xs uppercase tracking-widest text-gray-600 hover:text-pet-green smooth-transition font-bold">Início</a>
+                    <a href="#servicos" class="text-xs uppercase tracking-widest text-gray-600 hover:text-pet-green smooth-transition font-bold">Serviços</a>
+                    <a href="#sobre" class="text-xs uppercase tracking-widest text-gray-600 hover:text-pet-green smooth-transition font-bold">A Clínica</a>
+                    <a href="#contato" class="bg-pet-green text-white px-8 py-3 rounded-full hover:shadow-lg hover:scale-105 smooth-transition font-bold text-xs uppercase tracking-widest">Agendar Consulta</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://irp.cdn-website.com/84d3f6f2/dms3rep/multi/vet-with-dog-and-cat-in-clinic-2023-01-20-01-32-18-utc.jpg" 
+                 alt="[Veterinário cuidando de um cachorro]" 
+                 class="w-full h-full object-cover"
+                 onerror="this.src='https://via.placeholder.com/1920x1080?text=Veterinaria'">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="max-w-2xl">
+                <div class="flex items-center space-x-2 mb-4">
+                    <i class="fas fa-paw text-pet-green"></i>
+                    <h2 class="text-pet-green uppercase tracking-[0.3em] font-bold">Cuidado que vem do coração</h2>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8 text-gray-900">
+                    Seu melhor amigo em <span class="text-pet-green italic">boas mãos.</span>
+                </h1>
+                <p class="text-lg md:text-xl mb-10 text-gray-600 font-medium leading-relaxed">
+                    Oferecemos atendimento humanizado, tecnologia de ponta e muito carinho para garantir a saúde e a felicidade do seu pet.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="#contato" class="bg-gray-800 text-white px-10 py-5 rounded-full text-center font-bold text-sm uppercase tracking-widest hover:bg-pet-green smooth-transition shadow-xl flex items-center justify-center">
+                        <i class="fas fa-calendar-alt mr-2"></i> Agendar Avaliação
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section (Cards com Patinhas) -->
+    <div class="relative z-20 -mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white shadow-xl p-10 rounded-3xl border-b-8 border-pet-green hover:-translate-y-2 smooth-transition relative overflow-hidden">
+                <i class="fas fa-paw absolute -top-4 -right-4 text-pet-green/10 text-8xl"></i>
+                <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-stethoscope text-pet-green text-2xl"></i>
+                </div>
+                <h4 class="text-2xl font-bold mb-3">Consultas</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Exames preventivos e acompanhamento clínico completo para cães e gatos.</p>
+            </div>
+            <div class="bg-white shadow-xl p-10 rounded-3xl border-b-8 border-orange-300 hover:-translate-y-2 smooth-transition relative overflow-hidden">
+                <i class="fas fa-paw absolute -top-4 -right-4 text-orange-300/10 text-8xl"></i>
+                <div class="w-14 h-14 bg-orange-50 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-syringe text-orange-400 text-2xl"></i>
+                </div>
+                <h4 class="text-2xl font-bold mb-3">Vacinação</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Protocolos vacinais atualizados para manter seu pet protegido contra doenças.</p>
+            </div>
+            <div class="bg-white shadow-xl p-10 rounded-3xl border-b-8 border-blue-300 hover:-translate-y-2 smooth-transition relative overflow-hidden">
+                <i class="fas fa-paw absolute -top-4 -right-4 text-blue-300/10 text-8xl"></i>
+                <div class="w-14 h-14 bg-blue-50 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-microscope text-blue-400 text-2xl"></i>
+                </div>
+                <h4 class="text-2xl font-bold mb-3">Exames</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Laboratório próprio para resultados rápidos em exames de sangue e imagem.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
+            <h2 class="text-pet-green uppercase tracking-widest font-bold mb-4 text-sm">Nossos Cuidados</h2>
+            <h3 class="text-5xl font-bold text-gray-900 mb-6">Especialidades Veterinárias</h3>
+            <div class="flex justify-center space-x-2 mt-4">
+                <i class="fas fa-paw text-pet-green"></i>
+                <i class="fas fa-paw text-pet-green opacity-50"></i>
+                <i class="fas fa-paw text-pet-green opacity-20"></i>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Specialty 1 -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl smooth-transition group border border-gray-100 text-center">
+                <div class="text-pet-green text-3xl mb-4"><i class="fas fa-bone"></i></div>
+                <h4 class="text-xl font-bold mb-4 group-hover:text-pet-green smooth-transition">Ortopedia</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Tratamento de fraturas e problemas articulares com especialistas.</p>
+            </div>
+            <!-- Specialty 2 -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl smooth-transition group border border-gray-100 text-center">
+                <div class="text-pet-green text-3xl mb-4"><i class="fas fa-teeth"></i></div>
+                <h4 class="text-xl font-bold mb-4 group-hover:text-pet-green smooth-transition">Odontologia</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Limpeza de tártaro e cuidados bucais para evitar infecções.</p>
+            </div>
+            <!-- Specialty 3 -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl smooth-transition group border border-gray-100 text-center">
+                <div class="text-pet-green text-3xl mb-4"><i class="fas fa-heartbeat"></i></div>
+                <h4 class="text-xl font-bold mb-4 group-hover:text-pet-green smooth-transition">Cardiologia</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Avaliação do coração para garantir longevidade aos pets idosos.</p>
+            </div>
+            <!-- Specialty 4 -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl smooth-transition group border border-gray-100 text-center">
+                <div class="text-pet-green text-3xl mb-4"><i class="fas fa-cut"></i></div>
+                <h4 class="text-xl font-bold mb-4 group-hover:text-pet-green smooth-transition">Cirurgias</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Centro cirúrgico moderno para castrações e procedimentos complexos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-32 bg-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="lg:w-1/2 relative">
+                    <img src="https://images.unsplash.com/photo-1628009368231-7bb7cfcb0def?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="[Dra Carolina Veterinária]" 
+                         class="rounded-[3rem] shadow-2xl z-10 relative object-cover h-[600px] w-full"
+                         onerror="this.src='https://via.placeholder.com/600x800?text=Vet'">
+                    <div class="absolute -bottom-6 -right-6 bg-pet-green text-white p-8 rounded-3xl shadow-xl z-20">
+                        <i class="fas fa-paw mb-2 block text-2xl"></i>
+                        <p class="text-sm uppercase tracking-widest font-bold">CRMV 00000</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-pet-green uppercase tracking-widest font-bold mb-4 text-sm">Nossa História</h2>
+                    <h3 class="text-5xl font-bold mb-8 leading-tight text-gray-900">Dra. Carolina Mendes</h3>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Apaixonada por animais desde a infância, fundei a Amigo Fiel com o objetivo de criar um hospital que trata cada pet como se fosse nosso.
+                    </p>
+                    <p class="text-gray-500 text-lg mb-10 leading-relaxed italic">
+                        "Meu compromisso é oferecer ciência aliada ao amor, garantindo que o seu companheiro tenha a melhor qualidade de vida possível."
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-pet-green"></i>
+                            <span class="font-bold">Emergência 24h</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-pet-green"></i>
+                            <span class="font-bold">Laboratório Próprio</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-pet-green"></i>
+                            <span class="font-bold">Especialistas</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-pet-green"></i>
+                            <span class="font-bold">Banho e Tosa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="redes" class="py-24 bg-soft-sky border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-pet-green uppercase tracking-widest font-bold mb-4 text-sm">Fique por dentro</h2>
+            <h3 class="text-4xl font-bold mb-12">Siga nossas patinhas nas redes sociais</h3>
+            <div class="flex justify-center space-x-6 mb-12">
+                <a href="#" class="w-16 h-16 bg-white shadow-lg rounded-2xl flex items-center justify-center text-pink-500 hover:bg-pink-500 hover:text-white smooth-transition text-3xl">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="w-16 h-16 bg-white shadow-lg rounded-2xl flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white smooth-transition text-3xl">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="w-16 h-16 bg-white shadow-lg rounded-2xl flex items-center justify-center text-red-500 hover:bg-red-500 hover:text-white smooth-transition text-3xl">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+            <p class="text-gray-400 font-medium">@amigofiel.vet</p>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contato" class="py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+                
+                <!-- Info & Map Link -->
+                <div class="lg:w-1/3 bg-gray-800 p-16 text-white flex flex-col justify-between relative overflow-hidden">
+                    <i class="fas fa-paw absolute -bottom-10 -left-10 text-white/5 text-[15rem] rotate-12"></i>
+                    <div class="relative z-10">
+                        <h3 class="text-3xl font-bold mb-8">Onde estamos</h3>
+                        <p class="mb-12 opacity-90 font-light">Estamos localizados em uma área de fácil acesso com estacionamento próprio para o seu conforto.</p>
+                        
+                        <div class="space-y-8">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center"><i class="fas fa-phone"></i></div>
+                                <p class="text-sm">(11) 98765-4321</p>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marker-alt"></i></div>
+                                    <p class="text-sm">Rua dos Pets, 123 - Bairro Saúde<br>São Paulo - SP</p>
+                                </div>
+                                <!-- Botão Google Maps -->
+                                <a href="https://www.google.com/maps/search/?api=1&query=Clinica+Veterinaria+Sao+Paulo" target="_blank" class="flex items-center justify-center w-full bg-pet-green text-white font-bold py-4 px-6 rounded-2xl hover:bg-opacity-90 smooth-transition shadow-lg">
+                                    <i class="fas fa-location-dot mr-2 text-xl"></i> Ver no Google Maps
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Form -->
+                <div class="lg:w-2/3 p-16">
+                    <h3 class="text-4xl font-bold mb-4 text-gray-800">Fale Conosco</h3>
+                    <p class="text-gray-500 mb-10 text-lg">Preencha o formulário e agende o melhor horário para seu pet via WhatsApp.</p>
+                    
+                    <form id="vetForm" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="flex flex-col">
+                            <label class="text-xs uppercase font-bold text-gray-400 mb-2 tracking-widest">Seu Nome</label>
+                            <input type="text" id="nome_dono" required class="p-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-pet-green outline-none" placeholder="Ex: Carlos Santos">
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="text-xs uppercase font-bold text-gray-400 mb-2 tracking-widest">Nome do Pet</label>
+                            <input type="text" id="nome_pet" required class="p-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-pet-green outline-none" placeholder="Ex: Thor">
+                        </div>
+                        <div class="flex flex-col md:col-span-2">
+                            <label class="text-xs uppercase font-bold text-gray-400 mb-2 tracking-widest">Qual o motivo da visita?</label>
+                            <select id="motivo_vet" class="p-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-pet-green outline-none text-gray-500">
+                                <option>Consulta de Rotina</option>
+                                <option>Vacinação</option>
+                                <option>Castração</option>
+                                <option>Exames</option>
+                                <option>Banho e Tosa</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="md:col-span-2 bg-[#25D366] text-white font-bold py-5 rounded-2xl text-sm uppercase tracking-widest hover:bg-[#20ba5a] hover:shadow-xl smooth-transition flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-3 text-2xl"></i> Solicitar Agendamento
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-20 text-center">
+        <div class="flex justify-center items-center space-x-2 mb-6">
+            <i class="fas fa-paw text-pet-green text-2xl"></i>
+            <div class="text-2xl font-bold text-gray-800 uppercase tracking-tighter">Amigo<span class="text-pet-green">Fiel</span></div>
+        </div>
+        <div class="flex justify-center space-x-10 text-xs font-bold uppercase tracking-widest text-gray-400 mb-10">
+            <a href="#inicio" class="hover:text-pet-green">Início</a>
+            <a href="#servicos" class="hover:text-pet-green">Serviços</a>
+            <a href="#sobre" class="hover:text-pet-green">Sobre</a>
+            <a href="#redes" class="hover:text-pet-green">Redes</a>
+        </div>
+        <p class="text-gray-300 text-[10px] uppercase tracking-[0.2em]">© 2024 Amigo Fiel Clínica Veterinária. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Botão Flutuante de Emergência -->
+    <a href="https://wa.me/5511987654321" target="_blank" class="fixed bottom-8 right-8 bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 smooth-transition z-50">
+        <i class="fas fa-ambulance text-2xl"></i>
+    </a>
+
+    <script>
+        const form = document.getElementById('vetForm');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Dados da Clínica
+            const telefoneVet = "5511987654321"; 
+            
+            // Captura dos campos
+            const nomeDono = document.getElementById('nome_dono').value;
+            const nomePet = document.getElementById('nome_pet').value;
+            const motivo = document.getElementById('motivo_vet').value;
+            
+            // Formatação da mensagem para o Vet
+            let texto = `Olá, Clínica Amigo Fiel! Me chamo *${nomeDono}*.\n\nGostaria de agendar um(a) *${motivo}* para o(a) *${nomePet}*.`;
+            
+            const url = `https://wa.me/${telefoneVet}?text=${encodeURIComponent(texto)}`;
+            
+            window.open(url, '_blank');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Helena Souza | Psicologia Clínica & Bem-Estar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        .bg-sage { background-color: #7D8E7E; }
+        .text-sage { color: #7D8E7E; }
+        .bg-soft-cream { background-color: #F9F7F2; }
+        .smooth-transition { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .hero-gradient { background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2)); }
+    </style>
+</head>
+<body class="bg-soft-cream text-gray-800">
+
+    <!-- Header / Nav -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold tracking-tight text-sage uppercase">Helena<span class="text-gray-400 font-light italic">Souza</span></span>
+                </div>
+                <div class="hidden md:flex space-x-10 items-center">
+                    <a href="#inicio" class="text-xs uppercase tracking-widest text-gray-600 hover:text-sage smooth-transition font-semibold">Início</a>
+                    <a href="#especialidades" class="text-xs uppercase tracking-widest text-gray-600 hover:text-sage smooth-transition font-semibold">Especialidades</a>
+                    <a href="#sobre" class="text-xs uppercase tracking-widest text-gray-600 hover:text-sage smooth-transition font-semibold">Sobre</a>
+                    <a href="#contato" class="bg-sage text-white px-8 py-3 rounded-full hover:shadow-lg hover:bg-opacity-90 smooth-transition font-bold text-xs uppercase tracking-widest">Marcar Consulta</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://sciath.com.br/wp-content/uploads/2022/08/terapeuta.jpg" 
+                 alt="[Ambiente de consultório calmo]" 
+                 class="w-full h-full object-cover"
+                 onerror="this.src='https://via.placeholder.com/1920x1080?text=Psicologia'">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="max-w-2xl">
+                <h2 class="text-sage uppercase tracking-[0.3em] font-bold mb-4">Um espaço seguro para você</h2>
+                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8 text-gray-900">
+                    Sua saúde mental é a sua <span class="italic text-sage">prioridade.</span>
+                </h1>
+                <p class="text-lg md:text-xl mb-10 text-gray-600 font-light leading-relaxed">
+                    Apoio psicológico especializado para ajudar você a atravessar momentos difíceis, redescobrir sua força e viver com mais equilíbrio e propósito.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="#contato" class="bg-sage text-white px-10 py-5 rounded-full text-center font-bold text-sm uppercase tracking-widest hover:shadow-2xl smooth-transition">
+                        Agendar minha sessão
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Cards -->
+    <div class="relative z-20 -mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white shadow-xl p-10 rounded-2xl border-t-4 border-sage hover:-translate-y-2 smooth-transition">
+                <div class="w-14 h-14 bg-sage/10 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-heart text-sage text-2xl"></i>
+                </div>
+                <h4 class="text-2xl font-bold mb-3">Empatia</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Escuta ativa e sem julgamentos para que você se sinta compreendido e acolhido.</p>
+            </div>
+            <div class="bg-white shadow-xl p-10 rounded-2xl border-t-4 border-sage hover:-translate-y-2 smooth-transition">
+                <div class="w-14 h-14 bg-sage/10 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-lock text-sage text-2xl"></i>
+                </div>
+                <h4 class="text-2xl font-bold mb-3">Confidencialidade</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Sigilo absoluto regido pelo código de ética profissional, garantindo sua privacidade.</p>
+            </div>
+            <div class="bg-white shadow-xl p-10 rounded-2xl border-t-4 border-sage hover:-translate-y-2 smooth-transition">
+                <div class="w-14 h-14 bg-sage/10 rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-leaf text-sage text-2xl"></i>
+                </div>
+                <h4 class="text-2xl font-bold mb-3">Autoconhecimento</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Ferramentas para você entender seus processos internos e evoluir constantemente.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Expertise Section -->
+    <section id="especialidades" class="py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20">
+            <h2 class="text-sage uppercase tracking-widest font-bold mb-4 text-sm">Como posso ajudar</h2>
+            <h3 class="text-5xl font-bold text-gray-900 mb-6">Áreas de Atuação</h3>
+            <div class="w-20 h-1 bg-sage mx-auto mt-8"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Specialty 1 -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl smooth-transition group border border-gray-100">
+                <h4 class="text-xl font-bold mb-4 group-hover:text-sage smooth-transition">Ansiedade</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Manejo de crises, estresse e pensamentos acelerados no dia a dia.</p>
+            </div>
+            <!-- Specialty 2 -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl smooth-transition group border border-gray-100">
+                <h4 class="text-xl font-bold mb-4 group-hover:text-sage smooth-transition">Depressão</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Acompanhamento terapêutico para reencontrar o sentido e a vitalidade.</p>
+            </div>
+            <!-- Specialty 3 -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl smooth-transition group border border-gray-100">
+                <h4 class="text-xl font-bold mb-4 group-hover:text-sage smooth-transition">Relacionamentos</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Terapia focada em conflitos interpessoais, familiares e afetivos.</p>
+            </div>
+            <!-- Specialty 4 -->
+            <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl smooth-transition group border border-gray-100">
+                <h4 class="text-xl font-bold mb-4 group-hover:text-sage smooth-transition">Luto e Perdas</h4>
+                <p class="text-gray-500 text-sm leading-relaxed">Suporte emocional para atravessar processos de perda e transição.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-32 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="lg:w-1/2 relative">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="[Dra Helena Souza]" 
+                         class="rounded-[3rem] shadow-2xl z-10 relative object-cover h-[600px] w-full"
+                         onerror="this.src='https://via.placeholder.com/600x800?text=Psicologa'">
+                    <div class="absolute -bottom-6 -right-6 bg-sage text-white p-8 rounded-3xl shadow-xl z-20">
+                        <p class="text-sm uppercase tracking-widest font-bold">CRP 00/00000</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-sage uppercase tracking-widest font-bold mb-4 text-sm">A Profissional</h2>
+                    <h3 class="text-5xl font-bold mb-8 leading-tight text-gray-900">Dra. Helena Souza</h3>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Sou psicóloga clínica com mais de 8 anos de experiência, dedicada a auxiliar indivíduos em suas jornadas de autoconhecimento e cura emocional.
+                    </p>
+                    <p class="text-gray-500 text-lg mb-10 leading-relaxed">
+                        Minha abordagem é baseada na Terapia Cognitivo-Comportamental, focada em resultados práticos e na ressignificação de padrões que impedem o seu crescimento. Acredito que o processo terapêutico é uma parceria de respeito e coragem.
+                    </p>
+                    <div class="flex gap-6">
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-sage">500+</p>
+                            <p class="text-xs uppercase font-bold text-gray-400">Vidas Impactadas</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-3xl font-bold text-sage">8+</p>
+                            <p class="text-xs uppercase font-bold text-gray-400">Anos de Prática</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contato" class="py-32 bg-soft-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+                
+                <!-- Info & Map Link -->
+                <div class="lg:w-1/3 bg-sage p-16 text-white flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-8">Atendimento</h3>
+                        <p class="mb-12 opacity-90 font-light">Presencial em consultório ou Online via vídeo-chamada para todo o Brasil.</p>
+                        
+                        <div class="space-y-8">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center"><i class="fas fa-envelope"></i></div>
+                                <p class="text-sm">contato@drahelenasouza.com</p>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marker-alt"></i></div>
+                                    <p class="text-sm">Rua Harmonia, 456 - Edifício Equilíbrio<br>Vila Madalena, São Paulo - SP</p>
+                                </div>
+                                <!-- Botão Google Maps -->
+                                <a href="https://www.google.com/maps/search/?api=1&query=Rua+Harmonia+456+Vila+Madalena+São+Paulo+SP" target="_blank" class="flex items-center justify-center w-full bg-white text-sage font-bold py-4 px-6 rounded-2xl hover:bg-gray-100 smooth-transition shadow-lg">
+                                    <i class="fas fa-location-dot mr-2 text-xl"></i> Ver localização no Maps
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-16 flex space-x-4">
+                        <a href="#" class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-sage smooth-transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-sage smooth-transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Form Side (WhatsApp) -->
+                <div class="lg:w-2/3 p-16">
+                    <h3 class="text-4xl font-bold mb-4 text-gray-800">Inicie sua Jornada</h3>
+                    <p class="text-gray-500 mb-10">Preencha os campos abaixo para ser redirecionado ao meu WhatsApp pessoal.</p>
+                    
+                    <form id="psicologiaForm" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="flex flex-col">
+                            <label class="text-xs uppercase font-bold text-gray-400 mb-2 tracking-widest">Seu Nome</label>
+                            <input type="text" id="nome_paciente" required class="p-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-sage outline-none" placeholder="Ex: Ana Silva">
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="text-xs uppercase font-bold text-gray-400 mb-2 tracking-widest">Motivo do Contato</label>
+                            <select id="motivo_contato" class="p-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-sage outline-none text-gray-500">
+                                <option>Psicoterapia Individual</option>
+                                <option>Terapia de Casal</option>
+                                <option>Orientação de Pais</option>
+                                <option>Outras dúvidas</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col md:col-span-2">
+                            <label class="text-xs uppercase font-bold text-gray-400 mb-2 tracking-widest">Sua Mensagem (Opcional)</label>
+                            <textarea id="mensagem_body" rows="4" class="p-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-sage outline-none" placeholder="Conte brevemente como você está se sentindo..."></textarea>
+                        </div>
+                        <button type="submit" class="md:col-span-2 bg-[#25D366] text-white font-bold py-5 rounded-2xl text-sm uppercase tracking-widest hover:bg-[#20ba5a] hover:shadow-xl smooth-transition flex items-center justify-center">
+                            <i class="fab fa-whatsapp mr-3 text-xl"></i> Enviar Mensagem via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-20 text-center">
+        <div class="text-2xl font-bold text-sage mb-6 uppercase tracking-tighter">Helena<span class="font-light italic">Souza</span></div>
+        <div class="flex justify-center space-x-10 text-xs font-bold uppercase tracking-widest text-gray-400 mb-10">
+            <a href="#inicio" class="hover:text-sage">Início</a>
+            <a href="#especialidades" class="hover:text-sage">Especialidades</a>
+            <a href="#sobre" class="hover:text-sage">Sobre</a>
+        </div>
+        <p class="text-gray-300 text-[10px] uppercase tracking-[0.2em]">© 2024 Helena Souza Psicologia Clínica. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('psicologiaForm');
+        
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Dados da Psicóloga
+            const telefonePsicologa = "3499778403"; 
+            
+            // Captura dos campos
+            const nome = document.getElementById('nome_paciente').value;
+            const motivo = document.getElementById('motivo_contato').value;
+            const mensagem = document.getElementById('mensagem_body').value;
+            
+            // Formatação da mensagem para o Psicólogo
+            let texto = `Olá, Dra. Helena! Me chamo *${nome}*.\n\nEstou entrando em contato através do site sobre: *${motivo}*.`;
+            
+            if(mensagem) {
+                texto += `\n\n*Minha mensagem:* \n${mensagem}`;
+            }
+            
+            const url = `https://wa.me/${telefonePsicologa}?text=${encodeURIComponent(texto)}`;
+            
+            window.open(url, '_blank');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

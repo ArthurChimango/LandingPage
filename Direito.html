@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silva & Associados | Advocacia de Excelência</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .bg-gold { background-color: #C5A059; }
+        .text-gold { color: #C5A059; }
+        .border-gold { border-color: #C5A059; }
+        .smooth-transition { transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Header / Nav -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold tracking-tighter text-gray-800">SILVA<span class="text-gold">&</span>ASSOC</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#inicio" class="text-gray-600 hover:text-gold smooth-transition font-medium">Início</a>
+                    <a href="#servicos" class="text-gray-600 hover:text-gold smooth-transition font-medium">Atuação</a>
+                    <a href="#sobre" class="text-gray-600 hover:text-gold smooth-transition font-medium">O Escritório</a>
+                    <a href="#contato" class="bg-gold text-white px-6 py-2 rounded-sm hover:bg-opacity-90 smooth-transition font-bold">Fale Conosco</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" 
+                 alt="Escritório de Advocacia" 
+                 class="w-full h-full object-cover"
+                 onerror="this.src='https://via.placeholder.com/1920x1080?text=Advocacia'">
+            <div class="absolute inset-0 bg-slate-900/70"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-white">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                    Defendendo seus direitos com <span class="text-gold">rigor e excelência.</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 text-gray-200 font-light">
+                    Soluções jurídicas personalizadas para empresas e indivíduos que buscam segurança jurídica e resultados sólidos.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contato" class="bg-gold text-white px-8 py-4 rounded-sm text-center font-bold text-lg hover:bg-opacity-90 smooth-transition">
+                        Agendar Consultoria Jurídica
+                    </a>
+                    <a href="#servicos" class="border border-white text-white px-8 py-4 rounded-sm text-center font-bold text-lg hover:bg-white hover:text-gray-900 smooth-transition">
+                        Ver Áreas de Atuação
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="relative z-20 -mt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white shadow-xl p-8 rounded-sm">
+            <div class="text-center">
+                <p class="text-3xl font-bold text-gold">15+</p>
+                <p class="text-sm text-gray-500 uppercase tracking-widest">Anos de Experiência</p>
+            </div>
+            <div class="text-center">
+                <p class="text-3xl font-bold text-gold">2.5k+</p>
+                <p class="text-sm text-gray-500 uppercase tracking-widest">Causas Ganhas</p>
+            </div>
+            <div class="text-center">
+                <p class="text-3xl font-bold text-gold">500+</p>
+                <p class="text-sm text-gray-500 uppercase tracking-widest">Clientes Ativos</p>
+            </div>
+            <div class="text-center">
+                <p class="text-3xl font-bold text-gold">24h</p>
+                <p class="text-sm text-gray-500 uppercase tracking-widest">Suporte Urgente</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Practice Areas -->
+    <section id="servicos" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+            <h2 class="text-gold uppercase tracking-widest font-bold mb-2">Especialidades</h2>
+            <h3 class="text-4xl font-bold text-gray-800">Nossas Áreas de Atuação</h3>
+            <div class="w-20 h-1 bg-gold mx-auto mt-4"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-white p-10 border border-gray-100 hover:border-gold smooth-transition group">
+                <div class="text-4xl text-gold mb-6 group-hover:scale-110 smooth-transition inline-block">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h4 class="text-2xl font-bold mb-4">Direito Civil</h4>
+                <p class="text-gray-600 leading-relaxed mb-6">Assistência em contratos, responsabilidade civil, obrigações e propriedade com foco em evitar litígios desnecessários.</p>
+                <a href="#contato" class="text-gold font-bold uppercase text-sm tracking-widest hover:underline">Saber mais →</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white p-10 border border-gray-100 hover:border-gold smooth-transition group">
+                <div class="text-4xl text-gold mb-6 group-hover:scale-110 smooth-transition inline-block">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h4 class="text-2xl font-bold mb-4">Direito do Trabalho</h4>
+                <p class="text-gray-600 leading-relaxed mb-6">Defesa estratégica para empresas e trabalhadores em reclamações trabalhistas e consultoria preventiva de RH.</p>
+                <a href="#contato" class="text-gold font-bold uppercase text-sm tracking-widest hover:underline">Saber mais →</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white p-10 border border-gray-100 hover:border-gold smooth-transition group">
+                <div class="text-4xl text-gold mb-6 group-hover:scale-110 smooth-transition inline-block">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h4 class="text-2xl font-bold mb-4">Família e Sucessões</h4>
+                <p class="text-gray-600 leading-relaxed mb-6">Inventários, partilha de bens, divórcios e guarda, atuando com a discrição e sensibilidade que o caso requer.</p>
+                <a href="#contato" class="text-gold font-bold uppercase text-sm tracking-widest hover:underline">Saber mais →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-24 bg-gray-900 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 relative">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                         alt="Advogado Sênior" 
+                         class="rounded-sm shadow-2xl z-10 relative"
+                         onerror="this.src='https://via.placeholder.com/600x800?text=Advogado'">
+                    <div class="absolute -bottom-8 -right-8 w-64 h-64 border-8 border-gold/30 -z-0"></div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-gold uppercase tracking-widest font-bold mb-4">O Escritório</h2>
+                    <h3 class="text-4xl md:text-5xl font-bold mb-8">Tradição e Modernidade Unidas pela Justiça</h3>
+                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                        Fundado há mais de 15 anos, o Silva & Associados nasceu com o propósito de oferecer uma advocacia artesanal, onde cada processo é tratado com a devida exclusividade.
+                    </p>
+                    <p class="text-gray-400 text-lg mb-10 leading-relaxed">
+                        Nossa equipe é composta por especialistas mestres e doutores, focados em entender o negócio de nossos clientes para entregar soluções preventivas de alto impacto financeiro e jurídico.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-check-circle text-gold text-xl"></i>
+                            <span class="text-lg">Atendimento 100% Personalizado</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-check-circle text-gold text-xl"></i>
+                            <span class="text-lg">Transparência em Todas as Etapas</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-check-circle text-gold text-xl"></i>
+                            <span class="text-lg">Foco em Resultados Mensuráveis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-gold uppercase tracking-widest font-bold mb-2">Depoimentos</h2>
+                <h3 class="text-4xl font-bold text-gray-800">O que nossos clientes dizem</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="p-8 bg-gray-50 italic text-gray-700 border-l-4 border-gold">
+                    "O atendimento superou minhas expectativas. Resolveram uma questão trabalhista complexa da minha empresa de forma rápida e muito profissional."
+                    <div class="mt-4 font-bold not-italic text-gray-900">— Roberto M., Empresário</div>
+                </div>
+                <div class="p-8 bg-gray-50 italic text-gray-700 border-l-4 border-gold">
+                    "Confiança é a palavra que define este escritório. Fui assistida num processo de inventário e me senti segura em cada decisão tomada."
+                    <div class="mt-4 font-bold not-italic text-gray-900">— Cláudia S., Cliente Particular</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contato" class="py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white shadow-2xl overflow-hidden flex flex-col md:flex-row rounded-sm">
+                <!-- Info Side -->
+                <div class="md:w-1/3 bg-gold p-12 text-white">
+                    <h3 class="text-3xl font-bold mb-8 text-white">Contato Direto</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-map-marker-alt mt-1"></i>
+                            <p>Av. Paulista, 1000 - 15º Andar<br>Bela Vista, São Paulo - SP</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-phone-alt"></i>
+                            <p>(11) 9999-9999</p>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-envelope"></i>
+                            <p>contato@silvaadvocacia.com.br</p>
+                        </div>
+                        <div class="pt-10 flex space-x-4">
+                            <a href="#" class="hover:text-gray-200"><i class="fab fa-linkedin-in text-2xl"></i></a>
+                            <a href="#" class="hover:text-gray-200"><i class="fab fa-instagram text-2xl"></i></a>
+                            <a href="#" class="hover:text-gray-200"><i class="fab fa-facebook-f text-2xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Side -->
+                <div class="md:w-2/3 p-12">
+                    <h3 class="text-3xl font-bold mb-8">Envie sua mensagem</h3>
+                    <form id="contactForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex flex-col">
+                            <label class="mb-2 text-sm font-bold text-gray-600">Nome Completo</label>
+                            <input type="text" required class="p-3 border border-gray-300 focus:outline-none focus:border-gold rounded-sm" placeholder="Ex: João Silva">
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="mb-2 text-sm font-bold text-gray-600">E-mail</label>
+                            <input type="email" required class="p-3 border border-gray-300 focus:outline-none focus:border-gold rounded-sm" placeholder="exemplo@email.com">
+                        </div>
+                        <div class="flex flex-col md:col-span-2">
+                            <label class="mb-2 text-sm font-bold text-gray-600">Assunto</label>
+                            <select class="p-3 border border-gray-300 focus:outline-none focus:border-gold rounded-sm">
+                                <option>Direito Civil</option>
+                                <option>Direito do Trabalho</option>
+                                <option>Família e Sucessões</option>
+                                <option>Outros Assuntos</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col md:col-span-2">
+                            <label class="mb-2 text-sm font-bold text-gray-600">Sua Mensagem</label>
+                            <textarea rows="4" required class="p-3 border border-gray-300 focus:outline-none focus:border-gold rounded-sm" placeholder="Descreva brevemente sua situação..."></textarea>
+                        </div>
+                        <button type="submit" class="bg-gray-900 text-white font-bold py-4 rounded-sm hover:bg-gold smooth-transition md:col-span-2">
+                            Enviar Solicitação de Contato
+                        </button>
+                    </form>
+                    <div id="formStatus" class="mt-4 hidden p-4 rounded-sm text-center"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="text-2xl font-bold text-white mb-6">SILVA<span class="text-gold">&</span>ASSOC</div>
+            <p class="mb-8 max-w-lg mx-auto">Justiça com integridade e dedicação absoluta aos interesses de nossos clientes em todo o território nacional.</p>
+            <p class="text-sm">© 2024 Silva & Associados. Todos os direitos reservados. OAB/SP nº 000.000</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/3499778403" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 smooth-transition z-50">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script>
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form Handling
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            formStatus.classList.remove('hidden');
+            formStatus.innerHTML = "Processando sua mensagem...";
+            formStatus.className = "mt-4 p-4 rounded-sm text-center bg-blue-100 text-blue-800";
+
+            // Simulação de envio
+            setTimeout(() => {
+                formStatus.innerHTML = "Mensagem enviada com sucesso! Entraremos em contato em breve.";
+                formStatus.className = "mt-4 p-4 rounded-sm text-center bg-green-100 text-green-800";
+                contactForm.reset();
+            }, 1500);
+        });
+
+        // Mobile Menu Logic (Simples)
+        const menuBtn = document.getElementById('mobile-menu-button');
+        menuBtn.addEventListener('click', () => {
+            // Aqui você poderia implementar um menu lateral ou dropdown real
+            console.log("Menu mobile clicado");
+        });
+    </script>
+</body>
+</html>

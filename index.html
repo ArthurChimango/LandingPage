@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PageMaster | Portfólio Premium</title>
+    <title>PageMaster | Portfólio & Planos</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -15,8 +15,8 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .template-card img { transition: transform 0.5s ease; }
-        .template-card:hover img { transform: scale(1.05); }
+        .card-shadow:hover { transform: translateY(-5px); transition: all 0.3s ease; box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+        .badge-fast { background: #dcfce7; color: #166534; border: 1px solid #bbf7d0; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -32,9 +32,10 @@
                     <span class="text-xl font-extrabold tracking-tight uppercase">Page<span class="text-blue-600">Master</span></span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#modelos" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition">Nossos Modelos</a>
-                    <a href="https://wa.me/3499778403" target="_blank" class="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200">
-                        Orçamento via WhatsApp
+                    <a href="#modelos" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition">Modelos</a>
+                    <a href="#precos" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition">Preços</a>
+                    <a href="https://wa.me/3499778403" target="_blank" class="bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition shadow-lg">
+                        Orçamento Grátis
                     </a>
                 </div>
             </div>
@@ -42,53 +43,142 @@
     </nav>
 
     <!-- Hero -->
-    <section class="pt-40 pb-20 px-4 bg-gradient-to-b from-blue-50 to-transparent">
+    <section class="pt-40 pb-20 px-4">
         <div class="max-w-7xl mx-auto text-center">
-            <span class="bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">Portfólio Profissional</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
-                Impulsione suas vendas com <br><span class="gradient-text">Landing Pages de Elite.</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight">
+                Sua Landing Page pronta <br><span class="gradient-text">em tempo recorde.</span>
             </h1>
             <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-                Escolha um modelo validado e tenha seu site profissional pronto em tempo recorde. Clique abaixo para ver o resultado real de cada projeto ou entre em contato para solicitar seu modelo personalizado.
+                Páginas de alta conversão para profissionais que buscam autoridade. Escolha um modelo e tenha seu site no ar hoje mesmo.
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#modelos" class="bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold hover:bg-slate-800 transition shadow-xl">
-                    Ver Catálogo Completo
+                <a href="#precos" class="bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold hover:bg-slate-800 transition shadow-xl">
+                    Ver Planos e Preços
                 </a>
-                <a href="https://wa.me/3499778403" target="_blank" class="bg-white border border-slate-200 text-slate-900 px-10 py-4 rounded-2xl font-bold hover:bg-slate-50 transition">
-                    Falar com Desenvolvedor
+                <a href="#modelos" class="bg-white border border-slate-200 text-slate-900 px-10 py-4 rounded-2xl font-bold hover:bg-slate-50 transition">
+                    Ver Catálogo de Modelos
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Preços (Criação) -->
+    <section id="precos" class="py-24 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-slate-900">Planos de Desenvolvimento</h2>
+                <p class="text-slate-500">Valor único para a criação do seu projeto profissional.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Plano Express -->
+                <div class="card-shadow bg-slate-50 p-10 rounded-[3rem] border border-slate-200 flex flex-col relative overflow-hidden">
+                    <div class="absolute top-8 -right-12 bg-green-500 text-white px-12 py-1 rotate-45 text-[10px] font-bold uppercase tracking-widest">Flash</div>
+                    <span class="badge-fast px-3 py-1 rounded-full text-[10px] font-bold uppercase w-fit mb-6">Entrega em até 1 dia</span>
+                    <h3 class="text-3xl font-bold mb-2">Plano Express</h3>
+                    <p class="text-slate-500 text-sm mb-8 italic leading-relaxed">Ideal para quem quer presença rápida e profissional.</p>
+                    
+                    <div class="mb-8">
+                        <span class="text-4xl font-extrabold italic">R$ 397</span>
+                        <span class="text-slate-400">/pagamento único</span>
+                    </div>
+
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-center gap-3 text-sm text-slate-600 font-medium"><i class="fas fa-check text-green-500"></i> Baseado em Modelo Pronto</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600 font-medium"><i class="fas fa-check text-green-500"></i> Troca de Textos e Cores</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600 font-medium"><i class="fas fa-check text-green-500"></i> Integração de Contatos</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600 font-medium"><i class="fas fa-check text-green-500"></i> Otimizado para Celular</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-600 font-medium"><i class="fas fa-check text-green-500"></i> Hospedagem Grátis (Netlify)</li>
+                        <li class="flex items-center gap-3 text-sm text-slate-400 italic line-through"><i class="fas fa-times text-red-300"></i> Domínio Próprio Incluso</li>
+                    </ul>
+
+                    <a href="https://wa.me/3499778403?text=Olá! Gostaria de contratar o Plano Express (R$ 397)" target="_blank" class="block text-center bg-slate-900 text-white py-4 rounded-2xl font-bold hover:bg-blue-600 transition">
+                        Começar agora
+                    </a>
+                </div>
+
+                <!-- Plano Custom -->
+                <div class="card-shadow bg-blue-600 p-10 rounded-[3rem] text-white flex flex-col relative overflow-hidden shadow-2xl shadow-blue-200">
+                    <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase w-fit mb-6">Entrega em 2 a 3 dias</span>
+                    <h3 class="text-3xl font-bold mb-2 text-white">Plano Premium</h3>
+                    <p class="text-blue-100 text-sm mb-8 italic leading-relaxed">Para negócios que buscam uma identidade exclusiva e personalizada.</p>
+                    
+                    <div class="mb-8 text-white">
+                        <span class="text-4xl font-extrabold italic">R$ 1.197</span>
+                        <span class="text-blue-200">/pagamento único</span>
+                    </div>
+
+                    <ul class="space-y-4 mb-10 flex-grow">
+                        <li class="flex items-center gap-3 text-sm text-blue-50"><i class="fas fa-check text-blue-300"></i> Design Adaptado ao seu Negócio</li>
+                        <li class="flex items-center gap-3 text-sm text-blue-50"><i class="fas fa-check text-blue-300"></i> Estrutura Customizada (Seções)</li>
+                        <li class="flex items-center gap-3 text-sm text-blue-50"><i class="fas fa-check text-blue-300"></i> Tipografia e Identidade Visual</li>
+                        <li class="flex items-center gap-3 text-sm text-blue-50"><i class="fas fa-check text-blue-300"></i> 1 Reunião Online de Briefing</li>
+                        <li class="flex items-center gap-3 text-sm text-blue-50"><i class="fas fa-check text-blue-300"></i> Foco Total em Conversão</li>
+                        <li class="flex items-center gap-3 text-sm text-blue-50"><i class="fas fa-check text-blue-300"></i> 1 Semana de Ajustes Grátis</li>
+                    </ul>
+
+                    <a href="https://wa.me/3499778403?text=Olá! Quero saber mais sobre o Plano Premium (R$ 1.197)" target="_blank" class="block text-center bg-white text-blue-600 py-4 rounded-2xl font-bold hover:bg-slate-100 transition">
+                        Solicitar Projeto Único
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Adicional de Hospedagem (Upsell) -->
+    <section class="py-24 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-extrabold mb-2 uppercase tracking-widest text-slate-800">Upsell: Hospedagem + Domínio</h2>
+                <p class="text-slate-500 text-sm">Escolha como seu site aparecerá para os seus clientes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Opção Grátis -->
+                <div class="bg-white p-8 rounded-[2.5rem] border border-slate-200 shadow-sm">
+                    <div class="flex items-center gap-3 text-slate-400 font-bold mb-4 uppercase text-xs tracking-tighter">
+                        <i class="fas fa-gift"></i> <span>Opção A - Gratuita</span>
+                    </div>
+                    <div class="text-3xl font-extrabold mb-6 italic">R$ 0,00 <span class="text-xs font-normal text-slate-400">/ano</span></div>
+                    <ul class="text-xs space-y-3 text-slate-500 mb-0">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Servidor Netlify de alta velocidade</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i> Certificado SSL (Segurança HTTPS)</li>
+                        <li class="text-red-500 font-bold"><i class="fas fa-info-circle mr-2"></i> Link: cliente.netlify.app</li>
+                    </ul>
+                </div>
+
+                <!-- Opção Paga -->
+                <div class="bg-white p-8 rounded-[2.5rem] border-2 border-blue-500 shadow-xl relative">
+                    <div class="absolute -top-3 right-8 bg-blue-500 text-white px-4 py-1 rounded-full text-[9px] font-bold uppercase italic">Recomendado</div>
+                    <div class="flex items-center gap-3 text-blue-600 font-bold mb-4 uppercase text-xs tracking-tighter">
+                        <i class="fas fa-crown"></i> <span>Opção B - Profissional</span>
+                    </div>
+                    <div class="text-3xl font-extrabold mb-6 italic">R$ 297,00 <span class="text-xs font-normal text-slate-400">/ano</span></div>
+                    <ul class="text-xs space-y-3 text-slate-600 mb-0">
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> **Domínio .com.br incluso**</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> Hospedagem Premium (12 meses)</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2"></i> E-mail Profissional</li>
+                        <li class="text-blue-600 font-bold"><i class="fas fa-globe mr-2"></i> Link: www.suaclinica.com.br</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Modelos Grid -->
     <section id="modelos" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="mb-16 text-center">
-                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Escolha seu Segmento</h2>
-                <p class="text-slate-500">Páginas otimizadas para conversão e velocidade.</p>
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="mb-16">
+                <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Portfólio de Modelos</h2>
+                <p class="text-slate-500">Escolha o ponto de partida para o seu sucesso.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                
-                <!-- Direito -->
-                <div class="group bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 template-card">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" alt="Preview Advocacia" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition"></div>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 card-shadow">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" class="w-full h-56 object-cover">
                     <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold">Advocacia Premium</h3>
-                                <p class="text-slate-500 text-sm">Ideal para Advogados</p>
-                            </div>
-                            <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-lg text-[10px] font-bold uppercase">Luxury</span>
-                        </div>
-                        <a href="Direito.html" class="block w-full text-center bg-white border-2 border-slate-900 text-slate-900 py-4 rounded-2xl font-bold hover:bg-slate-900 hover:text-white transition">
-                            Ver Site de Exemplo
-                        </a>
+                        <h3 class="text-lg font-bold mb-4">Advocacia</h3>
+                        <a href="Direito.html" class="block text-center border-2 border-slate-900 py-3 rounded-xl font-bold hover:bg-slate-900 hover:text-white transition">Ver Modelo</a>
                     </div>
                 </div>
 
@@ -101,13 +191,12 @@
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
                             <div>
-                                <h3 class="text-xl font-bold">Lumina Estética</h3>
-                                <p class="text-slate-500 text-sm">Clínicas e Bem-Estar</p>
+                                <h3 class="text-xl font-bold">Estética</h3>
+                                
                             </div>
-                            <span class="bg-pink-100 text-pink-700 px-3 py-1 rounded-lg text-[10px] font-bold uppercase">Elegance</span>
                         </div>
                         <a href="Estetica.html" class="block w-full text-center bg-white border-2 border-slate-900 text-slate-900 py-4 rounded-2xl font-bold hover:bg-slate-900 hover:text-white transition">
-                            Ver Site de Exemplo
+                            Ver Modelo
                         </a>
                     </div>
                 </div>
@@ -121,77 +210,46 @@
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
                             <div>
-                                <h3 class="text-xl font-bold">Crescer & Agir</h3>
-                                <p class="text-slate-500 text-sm">Fisioterapia Infantil</p>
+                                <h3 class="text-xl font-bold">Fisioterapia Infantil</h3>
+
                             </div>
-                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-lg text-[10px] font-bold uppercase">Health</span>
                         </div>
                         <a href="FisioPed.html" class="block w-full text-center bg-white border-2 border-slate-900 text-slate-900 py-4 rounded-2xl font-bold hover:bg-slate-900 hover:text-white transition">
-                            Ver Site de Exemplo
+                            Ver Modelo
                         </a>
                     </div>
                 </div>
 
-                <!-- Móveis -->
-                <div class="group bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 template-card">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" alt="Preview Móveis" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition"></div>
-                    </div>
+                <div class="group bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 card-shadow">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" class="w-full h-56 object-cover">
                     <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold">Móveis & Estilo</h3>
-                                <p class="text-slate-500 text-sm">Lojas e Design</p>
-                            </div>
-                            <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-lg text-[10px] font-bold uppercase">Shop</span>
-                        </div>
-                        <a href="Moveis.html" class="block w-full text-center bg-white border-2 border-slate-900 text-slate-900 py-4 rounded-2xl font-bold hover:bg-slate-900 hover:text-white transition">
-                            Ver Site de Exemplo
-                        </a>
+                        <h3 class="text-lg font-bold mb-4">Móveis</h3>
+                        <a href="Moveis.html" class="block text-center border-2 border-slate-900 py-3 rounded-xl font-bold hover:bg-slate-900 hover:text-white transition">Ver Modelo</a>
                     </div>
                 </div>
 
-                <!-- Psicólogo -->
-                <div class="group bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 template-card">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" alt="Preview Psicologia" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition"></div>
-                    </div>
+                <div class="group bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 card-shadow">
+                    <img src="https://wordpress-cms-gc-prod-assets.quero.space/uploads/2019/01/Psicologia-Enem-1.jpg" class="w-full h-56 object-cover">
                     <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold">Helena Souza</h3>
-                                <p class="text-slate-500 text-sm">Psicologia Clínica</p>
-                            </div>
-                            <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-lg text-[10px] font-bold uppercase">Safe</span>
-                        </div>
-                        <a href="psicologo.html" class="block w-full text-center bg-white border-2 border-slate-900 text-slate-900 py-4 rounded-2xl font-bold hover:bg-slate-900 hover:text-white transition">
-                            Ver Site de Exemplo
-                        </a>
+                        <h3 class="text-lg font-bold mb-4">Psicologia</h3>
+                        <a href="psicologo.html" class="block text-center border-2 border-slate-900 py-3 rounded-xl font-bold hover:bg-slate-900 hover:text-white transition">Ver Modelo</a>
                     </div>
                 </div>
 
-                <!-- Vet -->
-                <div class="group bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 template-card">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="https://irp.cdn-website.com/84d3f6f2/dms3rep/multi/vet-with-dog-and-cat-in-clinic-2023-01-20-01-32-18-utc.jpg" alt="Preview Veterinária" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition"></div>
-                    </div>
+                <div class="group bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 card-shadow">
+                    <img src="https://irp.cdn-website.com/84d3f6f2/dms3rep/multi/vet-with-dog-and-cat-in-clinic-2023-01-20-01-32-18-utc.jpg" class="w-full h-56 object-cover">
                     <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold">Amigo Fiel</h3>
-                                <p class="text-slate-500 text-sm">Clínica Veterinária</p>
-                            </div>
-                            <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-lg text-[10px] font-bold uppercase">Pets</span>
-                        </div>
-                        <a href="vet.html" class="block w-full text-center bg-white border-2 border-slate-900 text-slate-900 py-4 rounded-2xl font-bold hover:bg-slate-900 hover:text-white transition">
-                            Ver Site de Exemplo
-                        </a>
+                        <h3 class="text-lg font-bold mb-4">Veterinária</h3>
+                        <a href="vet.html" class="block text-center border-2 border-slate-900 py-3 rounded-xl font-bold hover:bg-slate-900 hover:text-white transition">Ver Modelo</a>
                     </div>
                 </div>
-
+                <div class="group bg-slate-50 rounded-[2.5rem] overflow-hidden border border-slate-100 card-shadow">
+                    <img src="https://classic.exame.com/wp-content/uploads/2018/01/curriculo-na-mao.jpg">
+                    <div class="p-8">
+                        <h3 class="text-lg font-bold mb-4">Currículo</h3>
+                        <a href="Curriculo.html" class="block text-center border-2 border-slate-900 py-3 rounded-xl font-bold hover:bg-slate-900 hover:text-white transition">Ver Modelo</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -200,12 +258,11 @@
     <footer class="bg-slate-900 text-white py-16 px-4 text-center">
         <div class="max-w-7xl mx-auto flex flex-col items-center">
             <h2 class="text-2xl font-bold mb-4 uppercase">Page<span class="text-blue-600">Master</span></h2>
-            <p class="text-slate-500 text-xs uppercase tracking-[0.3em] mb-8">Especialistas em Landing Pages de Alta Performance</p>
+            <p class="text-slate-500 text-xs uppercase tracking-[0.3em] mb-8 italic">Seu negócio online em tempo recorde</p>
             <div class="flex space-x-6 mb-12">
                 <a href="https://wa.me/3499778403" class="text-slate-400 hover:text-white transition text-2xl"><i class="fab fa-whatsapp"></i></a>
-                <a href="#" class="text-slate-400 hover:text-white transition text-2xl"><i class="fab fa-instagram"></i></a>
             </div>
-            <p class="text-slate-600 text-[10px] uppercase tracking-widest">© 2024 PageMaster. Todos os direitos reservados.</p>
+            <p class="text-slate-600 text-[10px] uppercase tracking-widest">© 2026. Todos os direitos reservados.</p>
         </div>
     </footer>
 
